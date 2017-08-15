@@ -1,14 +1,15 @@
 # stack-queue
 
-A Clojure library designed to ... well, that part is up to you.
+A clojure program that checks for a palindrome in a given user input
 
 ## Usage
 
-FIXME
+just run lein run on the directory, or 
+run the jar file like a regular program
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Armando L. Toledo
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
