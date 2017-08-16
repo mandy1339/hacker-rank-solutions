@@ -19,7 +19,6 @@ class Solution {
     char popCharacter() {
       char last = *(--stack.end());
       stack.pop_back();
-      cout << "popping: " << last << endl;       //<<<<<<<<
       return last;              
     }
 
@@ -30,7 +29,6 @@ class Solution {
     char dequeueCharacter(){
       char first = queue.at(0);
       queue.erase(queue.begin());
-      cout << "dequeueing: " << first << endl;      //<<<<<<<<
       return first;
     }
 };
@@ -51,11 +49,6 @@ int main() {
       obj.pushCharacter(s[i]);
       obj.enqueueCharacter(s[i]);
     }
-    
-    // for (int i = 0; i < s.length(); i++) {
-    //     cout << obj.stack[i] << endl;
-    //     cout << obj.queue[i] << endl;
-    // }
 
 
     bool isPalindrome = true;
@@ -64,10 +57,8 @@ int main() {
     // dequeue the first character from queue.
     // compare both the characters.
     for (int i = 0; i < s.length() / 2; i++) {
-        cout << endl << endl <<"iteration: " << i << endl;
         if (obj.popCharacter() != obj.dequeueCharacter()) {
             isPalindrome = false;
-    
             break;
         }
     }
