@@ -8,4 +8,5 @@ solutions in languages:
 -java
 -Javascript (node.js)
 -clojure
-
+-C
+-C++
