@@ -13,6 +13,9 @@ class Solution
 {
     public static Node removeDuplicates(Node head) {
         //Write your code here
+	if(head == null){
+	    return null;
+	}
         Node traverser = head;
         while(traverser != null && traverser.next != null) {    // While not reached end of list
             if(traverser.data == traverser.next.data) {         // If current node = next node
@@ -24,7 +27,9 @@ class Solution
                     traverser.next = null;                          // Just remove the tail
                 }
             }
-            traverser = traverser.next;
+	    if(traverser.next != null && traverser.data != traverser.next.data) { // If the new next is also repeated, dont advance the traverser
+                traverser = traverser.next;
+	    }
         }
         return head;
     }
