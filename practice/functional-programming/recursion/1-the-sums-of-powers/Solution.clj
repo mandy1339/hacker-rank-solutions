@@ -1,7 +1,10 @@
 ; Enter your code here. Read input from STDIN. Print output to STDOUT
 ;
 (defn sop
-  "double recursion find total ways squares add up to a number"
+  "double recursion find total ways perfect powers add up to a number
+   recurse down only once (then exhaust) and then recurse right (not exhausted)
+   exhausted means you can't recurse down anymore. This is because each (perfect power aka 
+   denomination) can only be used once"
   [n m lst exhausted]
   
   (if (and (> n 0) (> m -1)) 
